@@ -1,0 +1,80 @@
+/*
+* default style
+*/
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+  font-family: "Droid Serif";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Yanone Kaffeesatz";
+  font-weight: normal;
+}
+
+.remark-code,
+.remark-inline-code {
+  font-family: "Ubuntu Mono";
+}
+
+/*
+* default overwrite
+*/
+p,
+.remark-slide-content .remark-code {
+  /*font-size:24px;*/
+}
+
+.remark-slide-container {
+}
+
+.remark-slide {
+  background-color: skyblue;
+}
+
+.remark-slide:before {
+  background-color: #A53131;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 80px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.remark-slide:after {
+  bottom: 0;
+  color: white;
+  content: "thisから始まるjavascript";
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  height: 1.1em;
+  left: -0.05em;
+  opacity: 0.95;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.remark-slide-content {
+  padding: 1em 2em 80px 2em;
+  width: 100%;
+}
+
+.remark-slide-number {
+  color: white;
+  opacity: 0.8;
+  /*font-size:20px;*/
+  z-index: 2;
+}
+
+.remark-slide-content .remark-code {
+  padding: 1em;
+  text-align: left;
+}
