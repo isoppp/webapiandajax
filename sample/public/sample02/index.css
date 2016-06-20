@@ -1,0 +1,43 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.list-group {
+  margin: 0;
+}
+
+.person {
+  display: table;
+  border: 1px solid #aaa;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.person-left {
+  display: table-cell;
+  padding: 20px;
+  width: 80%;
+  border-right: 1px solid #777;
+}
+
+.person-right {
+  display: table-cell;
+  padding: 10px;
+  width: 20%;
+  height:100%;
+  vertical-align: middle;
+}
+
+.zininaru {
+}
+
+.zininaru:hover{
+  background-color: pink;
+}
+
+.zininaru.is-disabled{
+  color: #fff;
+  background-color: orangered;
+}
