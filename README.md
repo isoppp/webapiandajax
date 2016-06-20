@@ -1,3 +1,3 @@
-# thisjs
+# WebAPI and ajax
 
-[isoppp.github.io/thisjs/](https://isoppp.github.io/thisjs/)
+[ghpages](https://isoppp.github.io/webapiandajax/)
