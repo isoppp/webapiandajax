@@ -9,6 +9,7 @@ $(function () {
   };
 
   function createData() {
+    //TODO data
     return {};
   }
 
@@ -26,21 +27,17 @@ $(function () {
   }
 
   function success(data, $btn) {
-    console.log(data);
     $btn.addClass(addClassName);
     $btn.text('痔になりました');
 
     var text = stateTextTemplate[parseInt(data.state)] + waitingTextTemplate(data.waiting);
     $btn.siblings().filter('.js-request-result').text(text).addClass(data.state ? 'is-success' : 'is-error');
-    console.log(typeof data.state);
     if(data.state === 1) {
-      console.log('post!');
-      postCountAPI()
-    };
+      postCountAPI();
+    }
   }
 
-  function error() {
-  }
+  function error() {}
 
   function postCountAPI(){
     $.ajax({

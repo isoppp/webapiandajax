@@ -47,21 +47,6 @@ p,
   width: 100%;
 }
 
-.remark-slide:after {
-  bottom: 0;
-  color: white;
-  content: "thisから始まるjavascript";
-  display: inline-block;
-  font-size: 30px;
-  font-weight: bold;
-  height: 1.1em;
-  left: -0.05em;
-  opacity: 0.95;
-  position: absolute;
-  width: 100%;
-  z-index: 3;
-}
-
 .remark-slide-content {
   padding: 1em 2em 80px 2em;
   width: 100%;
