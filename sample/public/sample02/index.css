@@ -41,3 +41,16 @@
   color: #fff;
   background-color: orangered;
 }
+
+.requestResult {
+  color: blue;
+  padding:5px;
+}
+
+.requestResult.is-success {
+  color: blue;
+}
+
+.requestResult.is-error {
+  color: red;
+}
