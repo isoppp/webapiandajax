@@ -3,18 +3,20 @@ $(function () {
   var $requestBtn = $('.js-request');
   var addClassName = 'is-disabled';
   var resultClassName = 'js-request-result';
-  var stateTextTemplate = ['今日の診察は難しいようです。ビオフェルミンを買って耐えましょう。', '病院に行けば今日診察が受けられるようです。']
+  var stateTextTemplate = ['病院の予約ができませんでした。ボラギノールを買って耐えましょう。', '病院の予約が完了しました。'];
   var waitingTextTemplate = function (peopleNum) {
     return '予約待ちの人数は' + peopleNum + '人です。';
   };
 
-  function createData() {
-    //TODO data
-    return {};
+  function createData($btn) {
+    return {
+      user_id: $btn.data('userid'),
+      severity: $btn.data('severity')
+    };
   }
 
   function request($btn) {
-    var data = createData();
+    var data = createData($btn);
     $.ajax({
       type: "POST",
       url: url,
@@ -32,25 +34,29 @@ $(function () {
 
     var text = stateTextTemplate[parseInt(data.state)] + waitingTextTemplate(data.waiting);
     $btn.siblings().filter('.js-request-result').text(text).addClass(data.state ? 'is-success' : 'is-error');
-    if(data.state === 1) {
-      postCountAPI();
+    if (data.state === 1) {
+      postCountAPI($btn);
     }
   }
 
-  function error() {}
+  function error() {
+  }
 
-  function postCountAPI(){
+  function postCountAPI($btn) {
     $.ajax({
       type: "POST",
       url: '/count/',
-      data: createData(),
+      data: createData($btn),
       success: postCountSuccess,
       error: postCountError
     });
   }
 
-  function postCountSuccess(){}
-  function postCountError(){}
+  function postCountSuccess() {
+  }
+
+  function postCountError() {
+  }
 
   $requestBtn.on('click', function () {
     var $this = $(this);

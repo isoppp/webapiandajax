@@ -3,6 +3,12 @@
 
 /*original*/
 
+table, th, td {
+  border: 1px #aaa solid;
+  border-collapse: collapse;
+  padding: 8px;
+}
+
 code {
   background: #EEE;
   border: 1px solid #DDD;
@@ -12,7 +18,7 @@ code {
 
 .marker {
   background: linear-gradient(transparent 50%, #FF6 50%);
-  display: inline-block;
+  display: inline;
   line-height: 1;
 }
 
